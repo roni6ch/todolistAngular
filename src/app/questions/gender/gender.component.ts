@@ -15,4 +15,8 @@ export class GenderComponent implements OnInit {
     this.employeeService.getEmployees().subscribe(data => {this.employees = data; console.log(data);});
   }
 
+  addEmployee = () => {
+    //this.employeeService.setEmployees()
+  }
+
 }

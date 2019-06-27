@@ -10,9 +10,14 @@ export class ActivityComponent implements OnInit {
 
  
   public employees =[];
+  public headElements = ['ID', 'Name', 'Age', 'Delete'];
+
   constructor(private employeeService: EmployeesService) { }
 
   ngOnInit() {
     this.employeeService.getEmployees().subscribe(data => {this.employees = data; console.log(data);});
+  }
+  deleteEmployee = (e,id) => {
+    console.log(id);
   }
 }
