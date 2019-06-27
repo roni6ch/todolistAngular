@@ -3,8 +3,6 @@ import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { IEmployee } from '../interfaces/iemployee';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
 
 @Injectable({
   providedIn: 'root'
