@@ -1,5 +1,7 @@
 <h2>Employee Detail</h2>
 
+<input type="text" placeholder="Add Employee" [(ngModel)]="name" (keyup.enter)="addEmployee()" />
+
 <table mdbTable>
   <thead class="black white-text">
     <tr>
@@ -7,12 +9,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr mdbTableCol *ngFor="let employee of employees" >
+    <tr mdbTableCol *ngFor="let employee of employees">
       <th scope="row">{{employee.id}}</th>
-      <td>{{employee.id}}</td>
-      <td>{{employee.name}}</td>
-      <td>{{employee.age}}</td>
-      <td><button type="button" mdbBtn color="warning" mdbWavesEffect (click)="deleteEmployee($event,employee.id)">Delete</button></td>
+      <td><input type="text" value="{{employee.name}}" #name /></td>
+      <td>
+        <button type="button" mdbBtn color="info" mdbWavesEffect (click)="deleteEmployee(employee.id)">Delete</button>
+        <button type="button" mdbBtn color="warning" mdbWavesEffect (click)="update(employee.id,name.value)">Update</button>
+      </td>
     </tr>
   </tbody>
 </table>
