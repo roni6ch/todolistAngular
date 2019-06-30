@@ -10,10 +10,12 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { GenderComponent } from './questions/gender/gender.component';
 import { ActivityComponent } from './questions/activity/activity.component';
+import { HeroComponent } from './hero/hero.component';
 
 const appRoutes: Routes = [
   //{ path: 'hero/:id',      component: HeroDetailComponent },
   { path: 'home', component: HomeComponent, data: { title: 'Heroes List' } },
+  { path: 'hero/:id',      component: HeroComponent },
   { path: 'gender', component: GenderComponent },
   { path: 'activity', component: ActivityComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,6 +28,7 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     GenderComponent,
+    HeroComponent,
     ActivityComponent
   ],
   imports: [
