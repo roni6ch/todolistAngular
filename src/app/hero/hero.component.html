@@ -1,3 +1,12 @@
-<p>
+<p appHighlight>
   hero works!
 </p>
+
+
+<input type="text" #name/>
+<button  (click)="getName(name.value)">get Name</button>
+
+<input type="text" [(ngModel)]="username" />
+<button  (click)="getUserName()">get username</button>
+
+<div *ngIf="username" class="name">Hello {{username}}</div>

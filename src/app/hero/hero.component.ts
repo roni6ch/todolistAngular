@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
-
-  constructor() { }
+  username = "";
+  constructor(private route:ActivatedRoute) { 
+    console.log(route.snapshot);
+    console.log('id',route.snapshot.params['id']); 
+  }
 
   ngOnInit() {
   }
+
+
+
+  getName = (name) => {
+    console.log(name);
+  }
+
+  getUserName(){
+    console.log(this.username);
+  }
+
 
 }

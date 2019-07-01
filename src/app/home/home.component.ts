@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Person } from  '../person';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +9,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute, private router:Router) { 
-    console.log('title',route.snapshot.data['title']);
+  public submitted = false;
+  public p1;
+  constructor() { 
   }
 
   ngOnInit() {
-    
+    this.p1 =  new Person('', '');
   }
+  onSubmit() { this.submitted = true; console.log(this.p1);  }
 
 }

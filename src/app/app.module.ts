@@ -11,18 +11,15 @@ import { HeaderComponent } from './header/header.component';
 import { GenderComponent } from './questions/gender/gender.component';
 import { ActivityComponent } from './questions/activity/activity.component';
 import { HeroComponent } from './hero/hero.component';
+import { HighlightDirective } from './highlight.directive';
 
 const appRoutes: Routes = [
   //{ path: 'hero/:id',      component: HeroDetailComponent },
-<<<<<<< HEAD
-  /*{ path: 'home', component: HomeComponent, data: { title: 'Heroes List' } },
-=======
-  { path: 'home', component: HomeComponent, data: { title: 'Heroes List' } },
-  { path: 'hero/:id',      component: HeroComponent },
->>>>>>> 9b7e1dc1dc1648acb4e9cb4be8b63bbd999a3c28
+  { path: 'home', component: HomeComponent },
+  { path: 'hero/:id',      component: HeroComponent , data: { title: 'Heroes List' } },
   { path: 'gender', component: GenderComponent },
   { path: 'activity', component: ActivityComponent },
-  */
+  { path: 'customers', loadChildren: () => import('./customers/customers.module').then(mod => mod.CustomersModule) },
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
 ];
@@ -34,7 +31,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     GenderComponent,
     HeroComponent,
-    ActivityComponent
+    ActivityComponent,
+    HighlightDirective
   ],
   imports: [
     RouterModule.forRoot(

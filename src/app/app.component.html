@@ -1,19 +1,26 @@
-<app-header></app-header>
-
-<!--
+<app-header (data)="printData($event)" [dataFromParent]="dataFromParentText"></app-header>
+<button (click)="sendDataToChild()">sendData to child</button>
+<p>get data from child in parent component: {{data}}</p>
 <ul class="nav justify-content-center grey lighten-4 py-4">
   <li class="nav-item">
-      <a class="nav-link active" routerLink="/gender" routerLinkActive="active">Gender</a>
+    <a class="nav-link " routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" routerLink="/activity" routerLinkActive="active">Activity</a>
+    <a class="nav-link " routerLink="/gender" routerLinkActive="active">Gender</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" routerLink="/hero/1" routerLinkActive="active">Hero 1</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link active" routerLink="/hero/2" routerLinkActive="active">Hero 2</a>
-</li>
+    <a class="nav-link " routerLink="/activity" routerLinkActive="active">Activity</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " routerLink="/hero/1" routerLinkActive="active">Hero 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " routerLink="/hero/2" routerLinkActive="active">Hero 2</a>
+  </li>
+  <li class="nav-item">
+    <button routerLink="/customers">Customers lazy loading</button>
+  </li>
+
+
 </ul>
--->
 <router-outlet></router-outlet>
