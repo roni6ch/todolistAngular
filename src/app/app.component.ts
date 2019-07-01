@@ -10,8 +10,12 @@ export class AppComponent {
   dataFromParentText="";
   data;
 
+  ngOnInit(){
+
+    console.log("ngOnInit app");
+  }
   ngAfterViewInit(){
-    console.log("Respond after Angular initializes the component's views and child views / the view that a directive is in.");
+    console.log("Respond after app");
   }
 
   printData(data){

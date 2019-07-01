@@ -11,6 +11,7 @@ export class HeroComponent implements OnInit {
   constructor(private route:ActivatedRoute) { 
     console.log(route.snapshot);
     console.log('id',route.snapshot.params['id']); 
+    console.log('title',route.snapshot.data['title']); 
   }
 
   ngOnInit() {

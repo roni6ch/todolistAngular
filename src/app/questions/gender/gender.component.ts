@@ -8,13 +8,7 @@ import { EmployeesService } from 'src/app/services/employees.service';
 })
 export class GenderComponent implements OnInit {
   public name = "";
-  public employees = [
-    { id: 1, name: "Andrew" },
-    { id: 2, name: "Brandon" },
-    { id: 3, name: "Christina" },
-    { id: 4, name: "Elena" },
-    { id: 5, name: "Felicia" }
-  ];
+  public employees = [];
   public headElements = ["ID", "Name", "Actions"];
 
   constructor(private employeeService: EmployeesService) {}
