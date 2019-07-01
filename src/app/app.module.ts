@@ -13,10 +13,11 @@ import { ActivityComponent } from './questions/activity/activity.component';
 
 const appRoutes: Routes = [
   //{ path: 'hero/:id',      component: HeroDetailComponent },
-  { path: 'home', component: HomeComponent, data: { title: 'Heroes List' } },
+  /*{ path: 'home', component: HomeComponent, data: { title: 'Heroes List' } },
   { path: 'gender', component: GenderComponent },
   { path: 'activity', component: ActivityComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  */
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
 ];
 
