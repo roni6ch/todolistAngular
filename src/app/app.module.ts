@@ -10,10 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { GenderComponent } from './questions/gender/gender.component';
 import { ActivityComponent } from './questions/activity/activity.component';
+import { HeroComponent } from './hero/hero.component';
 
 const appRoutes: Routes = [
   //{ path: 'hero/:id',      component: HeroDetailComponent },
+<<<<<<< HEAD
   /*{ path: 'home', component: HomeComponent, data: { title: 'Heroes List' } },
+=======
+  { path: 'home', component: HomeComponent, data: { title: 'Heroes List' } },
+  { path: 'hero/:id',      component: HeroComponent },
+>>>>>>> 9b7e1dc1dc1648acb4e9cb4be8b63bbd999a3c28
   { path: 'gender', component: GenderComponent },
   { path: 'activity', component: ActivityComponent },
   */
@@ -27,6 +33,7 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     GenderComponent,
+    HeroComponent,
     ActivityComponent
   ],
   imports: [
